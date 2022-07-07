@@ -1,4 +1,4 @@
-from keyword_google_search import search
+from keyword_google_search import google_search
 from email_checker import exists_in_database
 from send_emails import send_email
 from get_emails_from_websites import GEFW
@@ -13,7 +13,7 @@ text = """
 
 for keyword in open("keywords.txt", 'r').readlines():
     keyword = keyword.replace('\n', '')
-    search(keyword)
+    google_search(keyword)
     GEFW()
     print("===============================================================")
     for email in open("result_emails.txt", 'r').readlines():

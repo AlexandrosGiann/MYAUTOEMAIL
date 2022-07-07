@@ -1,7 +1,8 @@
 from googlesearch import search
 
-def search(keyword):
+def google_search(keyword):
     lst = []
+    search_results = search(keyword)
     try:
         while True:
             url = next(search_results)
@@ -11,3 +12,6 @@ def search(keyword):
     file = open('urls.txt', 'w')
     file.writelines(lst)
     file.close()
+if __name__ == '__main__':
+    google_search('yugioh')
+    print(open('urls.txt', 'r').read())
