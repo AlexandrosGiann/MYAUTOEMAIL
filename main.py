@@ -1,15 +1,8 @@
 from keyword_google_search import google_search
 from email_checker import exists_in_database
-from send_emails import send_email
 from get_emails_from_websites import GEFW
 
 lst = []
-
-USERNAME = ""
-PASSWORD = ""
-subject = ""
-text = """
-"""
 
 for keyword in open("keywords.txt", 'r').readlines():
     keyword = keyword.replace('\n', '')
