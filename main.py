@@ -13,10 +13,7 @@ for keyword in open("keywords.txt", 'r').readlines():
         email = email.replace('\n', '')
         if exists_in_database(email) and email not in lst:
             lst.append(email)
-try:
-    send_email(USERNAME, PASSWORD, lst, subject, text)
-except:
-    print("EMAIL ERROR")
+ 
 lst1 = [email.replace('\n', '') for email in open("saved_emails.txt", 'r').readlines()]
 for email in lst:
     if email not in lst1:
